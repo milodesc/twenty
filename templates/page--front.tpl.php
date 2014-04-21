@@ -10,6 +10,54 @@
 
 <div id="page">
 
+    <!-- Header -->
+    <header id="header" class="alt">
+        <?php if ($site_name || $site_slogan): ?>
+        <h1 id="logo">
+            <a href="/">
+            <div class="header__name-and-slogan" id="name-and-slogan">
+                <?php if ($site_name): ?>
+                    <h1 class="header__site-name" id="site-name">
+                        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
+                    </h1>
+                <?php endif; ?>
+
+                <?php if ($site_slogan): ?>
+                    <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
+                <?php endif; ?>
+            </div>
+            </a>
+        </h1>
+        <?php endif; ?>
+
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="/">Welcome</a></li>
+                <li class="submenu">
+                    <a href="">Layouts</a>
+                    <ul>
+                        <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                        <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                        <li><a href="no-sidebar.html">No Sidebar</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="submenu">
+                            <a href="">Submenu</a>
+                            <ul>
+                                <li><a href="#">Dolore Sed</a></li>
+                                <li><a href="#">Consequat</a></li>
+                                <li><a href="#">Lorem Magna</a></li>
+                                <li><a href="#">Sed Magna</a></li>
+                                <li><a href="#">Ipsum Nisl</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#" class="button special">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
     <header class="header" id="header" role="banner">
 
         <?php if ($logo): ?>
