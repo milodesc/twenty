@@ -3,7 +3,7 @@ name        = Twenty
 description = A responsive HTML5 theme based on HTML5 Up's Twenty 
 core        = 7.x
 
-; First we remove the system's menu and message styling since Zen has its own.
+; Removing stylesheets
 stylesheets[all][] = system.menus.css
 stylesheets[all][] = system.messages.css
 stylesheets[all][] = system.theme.css
