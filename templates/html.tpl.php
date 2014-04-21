@@ -13,9 +13,9 @@
     <?php print $styles; ?>
     <?php print $scripts; ?>
     <noscript>
-        <?php drupal_add_css(drupal_get_path("theme", "zen") . '/css/skel.css'); ?>
-        <?php drupal_add_css(drupal_get_path("theme", "zen") . '/css/style.css'); ?>
-        <?php drupal_add_css(drupal_get_path("theme", "zen") . '/css/style-noscript.css"'); ?>
+        <?php drupal_add_css(drupal_get_path("theme", "twenty") . '/css/skel.css'); ?>
+        <?php drupal_add_css(drupal_get_path("theme", "twenty") . '/css/style.css'); ?>
+        <?php drupal_add_css(drupal_get_path("theme", "twenty") . '/css/style-noscript.css'); ?>
     </noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
