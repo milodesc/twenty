@@ -21,7 +21,7 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 
 </head>
-<body class="<?php print $classes; ?>" <?php print $attributes;?>>
+<body class="<?php print $classes; ?> index loading" <?php print $attributes;?>>
 <?php print $page_top; ?>
 <?php print $page; ?>
 <?php print $page_bottom; ?>

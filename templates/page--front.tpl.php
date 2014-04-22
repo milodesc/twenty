@@ -8,10 +8,14 @@
  */
 ?>
 
-<div id="page">
 
     <!-- Header -->
     <header id="header" class="alt">
+        <?php if ($site_name || $site_slogan): ?>
+            <h1 id="logo">
+                <a href="<?php print $front_page; ?>"><?php print $site_name; ?> <span><?php print $site_slogan; ?></span></a>
+            </h1>
+        <?php endif; ?>
 
         <nav id="nav">
             <ul>
@@ -35,38 +39,16 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="/user" class="button special">Sign Up</a></li>
+                <li>
+                    <?php if ($user->uid > 0) {
+                        print l("Log Out", "/?q=user/logout", array('attributes' => array('class' => 'button special')));
+                    }
+                    else {
+                        print l("Log In", "/?q=user", array('attributes' => array('class' => 'button special')));
+                    } ?>
+                </li>
             </ul>
         </nav>
-    </header>
-
-
-    <header class="header" class="alt">
-
-        <?php if ($site_name || $site_slogan): ?>
-            <h1 id="logo">
-                <a href="<?php print $front_page; ?>"><?php print $site_name; ?> <span><?php print $site_slogan; ?></span></a>
-            </h1>
-        <?php endif; ?>
-
-        <?php if ($secondary_menu): ?>
-            <nav id="nav">
-                <?php print theme('links__system_secondary_menu', array(
-                    'links' => $secondary_menu,
-                    'attributes' => array(
-                        'class' => array('links', 'inline', 'clearfix'),
-                    ),
-                    'heading' => array(
-                        'text' => $secondary_menu_heading,
-                        'level' => 'h2',
-                        'class' => array('element-invisible'),
-                    ),
-                )); ?>
-            </nav>
-        <?php endif; ?>
-
-        <?php print render($page['header']); ?>
-
     </header>
 
 
@@ -305,7 +287,5 @@
     </div>
 
     <?php print render($page['footer']); ?>
-
-</div>
 
 <?php print render($page['bottom']); ?>
