@@ -13,11 +13,11 @@ function twenty_process_html(&$variables, $hook) {
 }
 
 function twenty_preprocess_page(&$variables) {
-    global $user;
-    if ($user->uid > 0) {
-        $variables['log_button'] = l("Log Out", "user/logout", array('attributes' => array('class' => 'button special')));
+    $log_button_attrs = array('attributes' => array('class' => 'button special'));
+    if ($variables['user']->uid == 0) {
+        $variables['log_button'] = l(t("Log In"), "user", $log_button_attrs);
     }
     else {
-        $variables['log_button'] = l("Log In", "user", array('attributes' => array('class' => 'button special')));
+        $variables['log_button'] = l(t("Log Out"), "user/logout", $log_button_attrs);
     }
 }
