@@ -39,14 +39,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <?php if ($user->uid > 0) {
-                        print l("Log Out", "/?q=user/logout", array('attributes' => array('class' => 'button special')));
-                    }
-                    else {
-                        print l("Log In", "/?q=user", array('attributes' => array('class' => 'button special')));
-                    } ?>
-                </li>
+                <li><?php print $log_button; ?></li>
             </ul>
         </nav>
     </header>
