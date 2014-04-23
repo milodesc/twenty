@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Returns the HTML for a single Drupal page.
+ * Returns the HTML for the site's front page.
  *
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728148
@@ -21,7 +21,11 @@
             <ul>
                 <li class="current"><a href="/">Welcome</a></li>
                 <li class="submenu">
-                    <a href="">Layouts</a>
+                    <a href="">Menu</a>
+
+                    <?php print theme('links__system_main_menu', array('links' => $main_menu)); ?>
+
+                    <!--
                     <ul>
                         <li><a href="left-sidebar.html">Left Sidebar</a></li>
                         <li><a href="right-sidebar.html">Right Sidebar</a></li>
@@ -38,10 +42,43 @@
                             </ul>
                         </li>
                     </ul>
+                    -->
                 </li>
                 <li><?php print $log_button; ?></li>
             </ul>
         </nav>
+
+
+
+
+        <!--
+        <div id="navigation">
+
+            <?php if ($main_menu): ?>
+                <nav id="main-menu" role="navigation" tabindex="-1">
+                    <?php
+                    print theme('links__system_main_menu', array(
+                        'links' => $main_menu,
+                        'attributes' => array(
+                            'class' => array('links', 'inline', 'clearfix'),
+                        ),
+                        'heading' => array(
+                            'text' => t('Main menu'),
+                            'level' => 'h2',
+                            'class' => array('element-invisible'),
+                        ),
+                    )); ?>
+                </nav>
+            <?php endif; ?>
+
+            <?php print render($page['navigation']); ?>
+
+        </div>
+         -->
+
+
+
+
     </header>
 
     <!-- Banner -->
