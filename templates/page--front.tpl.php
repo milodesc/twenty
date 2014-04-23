@@ -44,10 +44,8 @@
         </nav>
     </header>
 
-
     <!-- Banner -->
     <section id="banner">
-
         <!--
             ".inner" is set up as an inline-block so it automatically expands
             in both directions to fit whatever's inside it. This means it won't
@@ -69,7 +67,6 @@
 
     <!-- Main -->
     <article id="main">
-
         <header class="special container">
             <span class="icon fa-bar-chart-o"></span>
             <h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP<br />
