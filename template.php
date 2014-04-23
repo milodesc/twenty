@@ -20,4 +20,8 @@ function twenty_preprocess_page(&$variables) {
     else {
         $variables['log_button'] = l(t("Log Out"), "user/logout", $log_button_attrs);
     }
+
+    $menu_tree = menu_tree_all_data('main-menu');
+    $variables['menu_expanded'] = menu_tree_output($menu_tree);
+
 }

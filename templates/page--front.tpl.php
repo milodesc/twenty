@@ -23,6 +23,10 @@
                 <li class="submenu">
                     <a href="">Menu</a>
                     <?php print theme('links__system_main_menu', array('links' => $main_menu)); ?>
+                    <?php if($menu_expanded) {
+                        print render($menu_expanded);
+                      }
+                    ?>
                 </li>
                 <li><?php print $log_button; ?></li>
             </ul>
