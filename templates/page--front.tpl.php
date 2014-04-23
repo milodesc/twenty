@@ -22,62 +22,11 @@
                 <li class="current"><a href="/">Welcome</a></li>
                 <li class="submenu">
                     <a href="">Menu</a>
-
                     <?php print theme('links__system_main_menu', array('links' => $main_menu)); ?>
-
-                    <!--
-                    <ul>
-                        <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                        <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                        <li><a href="no-sidebar.html">No Sidebar</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li class="submenu">
-                            <a href="">Submenu</a>
-                            <ul>
-                                <li><a href="#">Dolore Sed</a></li>
-                                <li><a href="#">Consequat</a></li>
-                                <li><a href="#">Lorem Magna</a></li>
-                                <li><a href="#">Sed Magna</a></li>
-                                <li><a href="#">Ipsum Nisl</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    -->
                 </li>
                 <li><?php print $log_button; ?></li>
             </ul>
         </nav>
-
-
-
-
-        <!--
-        <div id="navigation">
-
-            <?php if ($main_menu): ?>
-                <nav id="main-menu" role="navigation" tabindex="-1">
-                    <?php
-                    print theme('links__system_main_menu', array(
-                        'links' => $main_menu,
-                        'attributes' => array(
-                            'class' => array('links', 'inline', 'clearfix'),
-                        ),
-                        'heading' => array(
-                            'text' => t('Main menu'),
-                            'level' => 'h2',
-                            'class' => array('element-invisible'),
-                        ),
-                    )); ?>
-                </nav>
-            <?php endif; ?>
-
-            <?php print render($page['navigation']); ?>
-
-        </div>
-         -->
-
-
-
 
     </header>
 
