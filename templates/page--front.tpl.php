@@ -226,11 +226,11 @@
     <footer id="footer">
 
         <ul class="icons">
-            <li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-            <li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
-            <li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+            <li><?php print l('<span class="label">Twitter</span>', "/", array('html' => TRUE, 'attributes' => array('class' => array('icon', 'circle', 'fa-twitter')))); ?> </li>
+            <li><?php print l('<span class="label">Facebook</span>', "/", array('html' => TRUE, 'attributes' => array('class' => array('icon', 'circle', 'fa-facebook'))));?></li>
+            <li><?php print l('<span class="label">Google+</span>', "/", array('html' => TRUE, 'attributes' => array('class' => array('icon', 'circle', 'fa-google-plus'))));?></li>
+            <li><?php print l('<span class="label">Github</span>', "/", array('html' => TRUE, 'attributes' => array('class' => array('icon', 'circle', 'fa-github'))));?></li>
+            <li><?php print l('<span class="label">Dribble</span>', "/", array('html' => TRUE, 'attributes' => array('class' => array('icon', 'circle', 'fa-dribbble'))));?></li>
         </ul>
 
         <span class="copyright">&copy; <?php print $site_name; ?>. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
