@@ -233,6 +233,6 @@
             <li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
         </ul>
 
-        <span class="copyright">&copy; Untitled. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+        <span class="copyright">&copy; <?php print $site_name; ?>. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
 
     </footer>

@@ -5,6 +5,10 @@ function twenty_preprocess_html(&$variables, $hook) {
     'lang' => $variables['language']->language,
     'dir' => $variables['language']->dir,
   );
+
+  if ($variables['user']->uid != 0) {
+        drupal_add_css(drupal_get_path("theme", "twenty") . '/css/admin.css', array("weight" => 10));
+  }
 }
 
 function twenty_process_html(&$variables, $hook) {
