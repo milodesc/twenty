@@ -17,6 +17,12 @@ function twenty_process_html(&$variables, $hook) {
 }
 
 function twenty_preprocess_page(&$variables) {
+
+    // Prep the menu so that it displays all levels of the navigation, not just the top level
+    $menu_tree = menu_tree_all_data('main-menu');
+    $variables['menu_expanded'] = menu_tree_output($menu_tree);
+
+    // Set up the login/logout button
     $log_button_attrs = array('attributes' => array('class' => 'button special'));
     if ($variables['user']->uid == 0) {
         $variables['log_button'] = l(t("Log In"), "user", $log_button_attrs);
@@ -25,7 +31,20 @@ function twenty_preprocess_page(&$variables) {
         $variables['log_button'] = l(t("Log Out"), "user/logout", $log_button_attrs);
     }
 
-    $menu_tree = menu_tree_all_data('main-menu');
-    $variables['menu_expanded'] = menu_tree_output($menu_tree);
+    $icon_items = array(
+        create_footer_icon("Twitter", "fa-twitter"),
+        create_footer_icon("Facebook", "fa-facebook"),
+        create_footer_icon("Google+", "fa-google-plus"),
+        create_footer_icon("Github", "fa-github"),
+        create_footer_icon("Dribbble", "fa-dribbble")
+    );
+    $variables['footer_icons'] = theme('item_list', array(
+        'attributes' => array('class' => array('icons')),
+        'items' => $icon_items,
+        'type' => 'ul'
+    ));
+}
 
+function create_footer_icon($label, $class) {
+    return l("<span class='label'>$label</span>", "/", array('html' => TRUE, 'attributes' => array('class' => array('icon', 'circle', $class))));
 }
