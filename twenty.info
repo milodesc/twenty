@@ -13,6 +13,7 @@ scripts[] = js/init.js
 
 ;Add regions
 regions[front_stack_1]  = Frontpage first
+regions[front_color_highlighted_2]  = Frontpage Color Highlighted
 regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted

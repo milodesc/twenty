@@ -66,39 +66,30 @@
                 <span class="icon fa-bar-chart-o"></span>
                     <?php print render($page['front_stack_1']); ?>
             </header>
-            <!-- front_stack_1 -->
+            <!-- end front_stack_1 -->
         <?php endif; ?>
 
-        <!-- One -->
-        <section class="wrapper style2 container special-alt">
-            <div class="row half">
-                <div class="8u">
-
-                    <header>
-                        <h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
-                    </header>
-                    <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
-                    <footer>
-                        <ul class="buttons">
-                            <li><a href="#" class="button">Find Out More</a></li>
+        <?php if($page['front_color_highlighted_2']): ?>
+            <!--start front_color_highlighted_2 -->
+            <section class="wrapper style2 container special-alt">
+                <div class="row half">
+                    <div class="8u">
+                        <?php print render($page['front_color_highlighted_2']); ?>
+                    </div>
+                    <div class="4u skel-cell-important">
+                        <ul class="feature-icons">
+                            <li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
+                            <li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
+                            <li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
+                            <li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
+                            <li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
+                            <li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
                         </ul>
-                    </footer>
-
+                    </div>
                 </div>
-                <div class="4u skel-cell-important">
-
-                    <ul class="feature-icons">
-                        <li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
-                        <li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-                        <li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-                        <li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
-                        <li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
-                        <li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
-                    </ul>
-
-                </div>
-            </div>
-        </section>
+            </section>
+            <!-- end front_color_highlighted_2-->
+        <?php endif; ?>
 
         <!-- Two -->
         <section class="wrapper style1 container special">
