@@ -60,6 +60,7 @@
 
     <!-- Main -->
     <article id="main">
+
         <?php if($page['front_stack_1']): ?>
             <!--start front_stack_1 -->
             <header class="special container">
@@ -92,43 +93,37 @@
         <?php endif; ?>
 
         <!-- Two -->
-        <section class="wrapper style1 container special">
-            <div class="row">
-                <div class="4u">
-
-                    <section>
-                        <span class="icon feature fa-check"></span>
-                        <header>
-                            <h3>This is Something</h3>
-                        </header>
-                        <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-                    </section>
-
+        <?php if ($page['triptych_first'] || $page['triptych_middle'] || $page['triptych_last']): ?>
+            <section class="wrapper style1 container special">
+                <div class="row">
+                    <?php if ($page['triptych_first']): ?>
+                        <div class="4u">
+                            <section>
+                                <span class="icon feature fa-check"></span>
+                                <?php print render($page['triptych_first']); ?>
+                            </section>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($page['triptych_middle']): ?>
+                        <div class="4u">
+                            <section>
+                                <span class="icon feature fa-check"></span>
+                                <?php print render($page['triptych_middle']); ?>
+                            </section>
+                        </div>
+                    <?php endif; ?>
+                    <?php if ($page['triptych_last']): ?>
+                        <div class="4u">
+                            <section>
+                                <span class="icon feature fa-check"></span>
+                                <?php print render($page['triptych_last']); ?>
+                            </section>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <div class="4u">
+            </section>
+        <?php endif; ?>
 
-                    <section>
-                        <span class="icon feature fa-check"></span>
-                        <header>
-                            <h3>Also Something</h3>
-                        </header>
-                        <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-                    </section>
-
-                </div>
-                <div class="4u">
-
-                    <section>
-                        <span class="icon feature fa-check"></span>
-                        <header>
-                            <h3>Probably Something</h3>
-                        </header>
-                        <p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-                    </section>
-
-                </div>
-            </div>
-        </section>
 
         <!-- Three -->
         <section class="wrapper style3 container special">
@@ -196,7 +191,7 @@
 
     </article>
 
-    <!-- CTA -->eb
+    <!-- CTA -->
     <section id="cta">
 
         <header>

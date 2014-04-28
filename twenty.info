@@ -14,6 +14,15 @@ scripts[] = js/init.js
 ;Add regions
 regions[front_stack_1]  = Frontpage first
 regions[front_color_highlighted_2]  = Frontpage Color Highlighted
+regions[front_3_across_3]  = Frontpage
+
+regions[triptych_first] = Triptych first
+regions[triptych_middle] = Triptych middle
+regions[triptych_last] = Triptych last
+
+
+
+;leftovers
 regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
