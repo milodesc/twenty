@@ -60,15 +60,14 @@
 
     <!-- Main -->
     <article id="main">
-        <header class="special container">
-            <span class="icon fa-bar-chart-o"></span>
-            <h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP<br />
-                I decided to give it a really creative name.</h2>
-            <p>Turns out <strong>Twenty</strong> was the best I could come up with. Anyway, lame name aside,<br />
-                it's minimally designed, fully responsive, built on HTML5/CSS3/<strong>skel</strong>,
-                and, like all my stuff,<br />
-                released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0</a> license. Have fun!</p>
-        </header>
+        <?php if($page['front_stack_1']): ?>
+            <!--start front_stack_1 -->
+            <header class="special container">
+                <span class="icon fa-bar-chart-o"></span>
+                    <?php print render($page['front_stack_1']); ?>
+            </header>
+            <!-- front_stack_1 -->
+        <?php endif; ?>
 
         <!-- One -->
         <section class="wrapper style2 container special-alt">

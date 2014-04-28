@@ -3,14 +3,7 @@ name        = Twenty
 description = A responsive HTML5 theme based on HTML5 Up's Twenty 
 core        = 7.x
 
-; Removing stylesheets
-stylesheets[all][] = system.menus.css
-stylesheets[all][] = system.messages.css
-stylesheets[all][] = system.theme.css
-
-; Then we add our own stylesheet.
 stylesheets[all][] = css/styles.css
-
 
 scripts[] = js/jquery.dropotron.min.js
 scripts[] = js/skel.min.js
@@ -19,6 +12,7 @@ scripts[] = js/init.js
 
 
 ;Add regions
+regions[front_stack_1]  = Frontpage first
 regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted
