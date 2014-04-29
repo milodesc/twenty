@@ -191,21 +191,21 @@
 
     </article>
 
-    <!-- CTA -->
-    <section id="cta">
-
-        <header>
-            <h2>Ready to do <strong>something</strong>?</h2>
-            <p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
-        </header>
-        <footer>
-            <ul class="buttons">
-                <li><a href="#" class="button special">Take My Money</a></li>
-                <li><a href="#" class="button">LOL Wut</a></li>
-            </ul>
-        </footer>
-
-    </section>
+    <!-- Call to Action Region -->
+    <?php if ($page['front_call_to_action_header_4'] || $page['front_call_to_action_footer_5']): ?>
+        <section id="cta">
+            <?php if ($page['front_call_to_action_header_4']): ?>
+                <header>
+                    <?php print render($page['front_call_to_action_header_4']); ?>
+                </header>
+            <?php endif; ?>
+            <?php if ($page['front_call_to_action_footer_5']): ?>
+                <footer>
+                    <?php print render($page['front_call_to_action_footer_5']); ?>
+                </footer>
+            <?php endif; ?>
+        </section>
+    <?php endif; ?>
 
     <!-- Footer -->
     <footer id="footer">
