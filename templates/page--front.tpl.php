@@ -65,7 +65,7 @@
             <!--start front_stack_1 -->
             <header class="special container">
                 <span class="icon fa-bar-chart-o"></span>
-                    <?php print render($page['front_stack_1']); ?>
+                <?php print render($page['front_stack_1']); ?>
             </header>
             <!-- end front_stack_1 -->
         <?php endif; ?>
@@ -77,16 +77,11 @@
                     <div class="8u">
                         <?php print render($page['front_color_highlighted_2']); ?>
                     </div>
-                    <div class="4u skel-cell-important">
-                        <ul class="feature-icons">
-                            <li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
-                            <li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-                            <li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-                            <li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
-                            <li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
-                            <li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
-                        </ul>
-                    </div>
+                    <?php if($page['front_color_highlighted_icon_list_2']): ?>
+                        <div class="4u skel-cell-important">
+                            <?php print render($page['front_color_highlighted_icon_list_2']); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </section>
             <!-- end front_color_highlighted_2-->

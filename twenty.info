@@ -21,6 +21,7 @@ scripts[] = js/init.js
 ;Add regions
 regions[front_stack_1]  = Frontpage first
 regions[front_color_highlighted_2]  = Frontpage Color Highlighted
+regions[front_color_highlighted_icon_list_2]  = Frontpage Color Highlighted Icon List
 regions[front_call_to_action_header_4]  = Frontpage Call to Action Header
 regions[front_call_to_action_footer_5]  = Frontpage Call to Action Footer
 
