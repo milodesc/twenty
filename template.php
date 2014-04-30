@@ -23,7 +23,7 @@ function twenty_preprocess_page(&$variables) {
     $variables['menu_expanded'] = menu_tree_output($menu_tree);
 
     // Set up the login/logout button
-    $log_button_attrs = array('attributes' => array('class' => 'button special'));
+    $log_button_attrs = array('attributes' => array('class' => array('button', 'special')));
     if ($variables['user']->uid == 0) {
         $variables['log_button'] = l(t("Log In"), "user", $log_button_attrs);
     }
