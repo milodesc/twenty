@@ -6,6 +6,10 @@ function twenty_preprocess_html(&$variables, $hook) {
     'dir' => $variables['language']->dir,
   );
 
+  if (!drupal_is_front_page()) {
+    $variables['classes_array'][] = 'left-sidebar';
+  }
+
   if ($variables['user']->uid != 0) {
         drupal_add_css(drupal_get_path("theme", "twenty") . '/css/admin.css', array("weight" => 10));
   }
