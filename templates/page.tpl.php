@@ -37,6 +37,13 @@
     <article id="main">
 
         <header class="special container">
+
+            <?php if ($messages): ?>
+                <div id="messages"><div class="section clearfix">
+                        <?php print $messages; ?>
+                    </div></div> <!-- /.section, /#messages -->
+            <?php endif; ?>
+
             <span class="icon fa-laptop"></span>
             <?php print render($title_prefix); ?>
             <h2>
