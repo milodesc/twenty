@@ -9,6 +9,8 @@
 ?>
 
 
+
+
     <!-- Header -->
     <header id="header">
         <?php if ($site_name || $site_slogan): ?>
@@ -63,7 +65,18 @@
                 endif; ?>
             </h2>
             <?php print render($title_suffix); ?>
-            <p><?php print render(node_view($node, 'teaser')); ?></p>
+            <?php if(isset($node)): ?>
+                <p>
+                    <?php
+
+                    print render(field_view_field('node', $node, 'body', array(
+                        'label'=>'hidden',
+                        'type' => 'text_summary_or_trimmed',
+                        'settings'=>array('trim_length' => 50),
+                    )));
+                    ?>
+                </p>
+            <? endif; ?>
         </header>
 
         <!-- One -->
