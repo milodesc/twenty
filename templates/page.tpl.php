@@ -10,7 +10,7 @@
 
 
     <!-- Header -->
-    <header id="header" class="alt">
+    <header id="header">
         <?php if ($site_name || $site_slogan): ?>
             <h1 id="logo">
                 <a href="<?php print $front_page; ?>"><?php print $site_name; ?> <span><?php print $site_slogan; ?></span></a>
